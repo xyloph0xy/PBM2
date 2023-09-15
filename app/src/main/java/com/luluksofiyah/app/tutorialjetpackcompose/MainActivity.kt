@@ -41,6 +41,20 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+/* 
+onCreate() merupakan method yang akan dijalankan ketika sistem pertama kali membuat aktivitas, 
+method ini menerima parameter savedInstanceState yang merupakan objek Bundle yang berisi status aktivitas 
+yang telah disimpan sebelumnya 
+*/
+/*
+Blok setContent menentukan tata letak aktivitas tempat fungsi composable dipanggil. 
+Fungsi composable hanya dapat dipanggil dari fungsi composable lain.
+*/
+/*
+function MessageCard yang terdapat di dalam blok setContent{} merupakan function yang dibuat untuk mendapatkan nama
+yang akan mengonfigurasikan elemen teks
+*/
+
 data class Message(val author: String, val body: String)
 
 @Composable
@@ -81,3 +95,9 @@ fun PreviewMessageCard() {
         }
     }
 }
+
+/*
+Anotasi @Preview digunakan untuk melihat preview/pratinjau fungsi composable tanpa harus membuild pada emulator.
+Anotasi @Preview hanya dapat digunakan untuk melihat preview yang tidak menggunakan parameter,
+sehingga perlu dibuat function PreviewMessageCard() yang memanggil function MessageCard() dengan parameter yang sesuai
+*/
